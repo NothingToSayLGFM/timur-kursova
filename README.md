@@ -8,6 +8,8 @@ An Electron application with Vue
 
 ## Project Setup
 
+Node.js 18.15.0
+
 ### Install
 
 ```bash

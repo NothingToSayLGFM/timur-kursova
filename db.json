@@ -1,166 +1,43 @@
 {
   "users": [
     {
-      "id": 1,
+      "id": "1",
       "role": "admin",
       "login": "admin",
-      "password": "admin",
-      "question": [
-        {
-          "id": 1,
-          "answer": "123"
-        },
-        {
-          "id": 2,
-          "answer": "some"
-        },
-        {
-          "id": 6,
-          "answer": ["123"]
-        },
-        {
-          "id": 7,
-          "answer": "4444"
-        }
-      ]
-    },
-    {
-      "login": "123",
-      "password": "123",
-      "question": [
-        {
-          "id": 1,
-          "answer": "123"
-        },
-        {
-          "id": 2,
-          "answer": "333"
-        },
-        {
-          "id": 3,
-          "answer": ["1", "2"]
-        },
-        {
-          "id": 4,
-          "answer": "3"
-        },
-        {
-          "id": 5,
-          "answer": "asd"
-        }
-      ],
-      "id": 2
-    },
-    {
-      "login": "333",
-      "password": "333",
-      "question": [
-        {
-          "id": 1,
-          "answer": "333"
-        },
-        {
-          "id": 2,
-          "answer": "333"
-        },
-        {
-          "id": 3,
-          "answer": ["2", "3"]
-        },
-        {
-          "id": 4,
-          "answer": "3"
-        },
-        {
-          "id": 5,
-          "answer": "asd"
-        }
-      ],
-      "id": 3
-    },
-    {
-      "login": "j",
-      "password": "k",
-      "question": [
-        {
-          "id": 1,
-          "answer": "123"
-        },
-        {
-          "id": 2,
-          "answer": "333"
-        },
-        {
-          "id": 3,
-          "answer": ["2", "3"]
-        },
-        {
-          "id": 4,
-          "answer": "2"
-        },
-        {
-          "id": 5,
-          "answer": "asd"
-        }
-      ],
-      "id": 4
-    },
-    {
-      "login": "3333",
-      "password": "33333",
-      "question": [],
-      "id": 5
+      "password": "admin"
     }
   ],
   "tasks": [
     {
-      "type": "typing",
-      "rightUnswer": ["1", "1"],
-      "title": "title",
-      "text": "text",
-      "id": 1
-    },
-    {
-      "type": "typing",
-      "rightUnswer": ["1", "1"],
-      "title": "title",
-      "text": "some",
-      "id": 2
-    },
-    {
       "type": "checkboxes",
       "questions": ["1", "2", "3"],
+      "rightUnswer": ["2", "1"],
       "title": "title",
       "text": "some",
-      "id": 3
+      "id": "3"
     },
     {
       "type": "radios",
       "questions": ["1", "2", "3"],
+      "rightUnswer": ["1"],
       "title": "some",
       "text": "some",
-      "id": 4
-    },
-    {
-      "type": "radios",
-      "questions": ["sd", "asd", "asd"],
-      "title": "title1",
-      "text": "somesdas2",
-      "id": 5
-    },
-    {
-      "type": "checkboxes",
-      "questions": ["123"],
-      "title": "111",
-      "text": "sdasd",
-      "id": 6
+      "id": "4"
     },
     {
       "type": "typing",
       "rightUnswer": ["434", "123"],
       "title": "23213",
       "text": "23123",
-      "id": 7
+      "id": "7"
+    },
+    {
+      "id": "4bc5",
+      "rightUnswer": ["testmulti"],
+      "questions": ["testmulti"],
+      "title": "testmulti",
+      "text": "testmulti",
+      "type": "checkboxes"
     }
   ]
 }
