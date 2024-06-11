@@ -1,7 +1,7 @@
 <template>
   <v-form @submit.prevent="submitHandler">
     <v-text-field label="title" variant="outlined" v-model="title"></v-text-field>
-    <v-textarea label="description" variant="outlined" v-model="text"></v-textarea>
+    <v-textarea label="description" variant="outlined" v-model="description"></v-textarea>
     <div class="wrap">
       <p class="v-title">Variants</p>
       <div class="block" v-for="(input, index) in inputsValues" :key="`input-${index}`">
@@ -43,12 +43,16 @@
 <script setup>
 import { ref } from 'vue'
 import { useTasksStore } from '../stores/tasks'
+import { useRouter } from 'vue-router'
+
 const inputsValues = ref([])
 const answersValues = ref([])
 
 const title = ref('')
-const text = ref('')
+const description = ref('')
 const isLoading = ref(false)
+
+const router = useRouter()
 
 const store = useTasksStore()
 
@@ -73,7 +77,12 @@ function minusAnswer() {
 }
 
 async function submitHandler() {
-  if (!inputsValues.value.length || !answersValues.value.length || !title.value || !text.value)
+  if (
+    !inputsValues.value.length ||
+    !answersValues.value.length ||
+    !title.value ||
+    !description.value
+  )
     return
 
   let data = {}
@@ -97,7 +106,7 @@ async function submitHandler() {
   data.rightUnswer = answer
   data.questions = questions
   data.title = title.value
-  data.text = text.value
+  data.description = description.value
   data.type = 'checkboxes'
 
   isLoading.value = true

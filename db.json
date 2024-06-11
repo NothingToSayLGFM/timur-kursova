@@ -9,35 +9,36 @@
   ],
   "tasks": [
     {
-      "type": "checkboxes",
-      "questions": ["1", "2", "3"],
-      "rightUnswer": ["2", "1"],
-      "title": "title",
-      "text": "some",
-      "id": "3"
+      "id": "241b",
+      "title": "testtype",
+      "description": "testtype",
+      "answer": "testtype",
+      "type": "typing"
     },
     {
-      "type": "radios",
-      "questions": ["1", "2", "3"],
-      "rightUnswer": ["1"],
-      "title": "some",
-      "text": "some",
-      "id": "4"
-    },
-    {
-      "type": "typing",
-      "rightUnswer": ["434", "123"],
-      "title": "23213",
-      "text": "23123",
-      "id": "7"
-    },
-    {
-      "id": "4bc5",
-      "rightUnswer": ["testmulti"],
-      "questions": ["testmulti"],
-      "title": "testmulti",
-      "text": "testmulti",
+      "id": "b703",
+      "rightUnswer": [
+        "testMulti"
+      ],
+      "questions": [
+        "testMulti",
+        "testType",
+        "testVar"
+      ],
+      "title": "testMulti",
+      "description": "testMulti",
       "type": "checkboxes"
+    },
+    {
+      "id": "e43b",
+      "questions": [
+        "testVar",
+        "testMulti",
+        "testType"
+      ],
+      "rightUnswer": "testVar",
+      "title": "testVar",
+      "description": "testVar"
     }
   ]
 }

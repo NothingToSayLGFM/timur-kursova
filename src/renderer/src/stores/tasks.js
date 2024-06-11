@@ -15,6 +15,10 @@ export const useTasksStore = defineStore('tasks', {
     async getTasks() {
       const { data } = await axios.get('http://localhost:3000/tasks')
       this.tasks = data
+    },
+    async deleteTask(id) {
+      await axios.delete(`http://localhost:3000/tasks/${id}`)
+      await this.getTasks()
     }
   },
   persist: true

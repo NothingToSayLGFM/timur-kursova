@@ -1,19 +1,25 @@
 <template>
   <v-container>
     <v-row>
-      <v-col cols="6" v-for="n in 10" :key="`task-${n}`">
-        <Card typeOf="student" />
+      <v-col cols="6" v-for="(task, index) in currentTasks" :key="`task-${index}`">
+        <Card :task="task" />
       </v-col>
     </v-row>
   </v-container>
 </template>
 
 <script setup>
-import { onMounted } from 'vue'
+import { onMounted, computed } from 'vue'
+import { useTasksStore } from '../stores/tasks'
 import Card from '../components/Card.vue'
 
-// onMounted(async () => {
-//   const a = await axios.get('http://localhost:3000/tasks')
-//   console.log(a)
-// })
+const tasks = useTasksStore()
+
+const currentTasks = computed(() => {
+  return tasks.tasks
+})
+
+onMounted(async () => {
+  await tasks.getTasks()
+})
 </script>

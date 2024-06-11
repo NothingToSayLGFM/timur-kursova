@@ -1,7 +1,7 @@
 <template>
   <v-form @submit.prevent="submitHandler">
     <v-text-field label="title" variant="outlined" v-model="title"></v-text-field>
-    <v-textarea label="description" variant="outlined" v-model="text"></v-textarea>
+    <v-textarea label="description" variant="outlined" v-model="description"></v-textarea>
     <p class="v-title">Variants</p>
     <v-text-field
       class="mb-5"
@@ -47,8 +47,11 @@
 <script setup>
 import { reactive, ref } from 'vue'
 import { useTasksStore } from '../stores/tasks'
+import { useRouter } from 'vue-router'
 
 const store = useTasksStore()
+
+const router = useRouter()
 
 const inputsValues = reactive({
   first: '',
@@ -57,18 +60,19 @@ const inputsValues = reactive({
 })
 const right = ref('')
 const title = ref('')
-const text = ref('')
+const description = ref('')
 
 const isLoading = ref(false)
 
 async function submitHandler() {
-  if (!Object.values(inputsValues).includes(right.value) || !title.value || !text.value) return
+  if (!Object.values(inputsValues).includes(right.value) || !title.value || !description.value)
+    return
 
   let data = {
     questions: Object.values(inputsValues),
     rightUnswer: right.value,
     title: title.value,
-    text: text.value
+    description: description.value
   }
 
   isLoading.value = true
