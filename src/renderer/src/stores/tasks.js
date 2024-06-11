@@ -4,7 +4,8 @@ import axios from 'axios'
 export const useTasksStore = defineStore('tasks', {
   state: () => {
     return {
-      tasks: null
+      tasks: null,
+      activeTask: null
     }
   },
   actions: {
@@ -19,6 +20,10 @@ export const useTasksStore = defineStore('tasks', {
     async deleteTask(id) {
       await axios.delete(`http://localhost:3000/tasks/${id}`)
       await this.getTasks()
+    },
+    async getTask(id) {
+      const { data } = await axios.get(`http://localhost:3000/tasks/${id}`)
+      this.activeTask = data
     }
   },
   persist: true

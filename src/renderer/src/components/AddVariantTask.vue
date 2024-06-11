@@ -72,7 +72,8 @@ async function submitHandler() {
     questions: Object.values(inputsValues),
     rightUnswer: right.value,
     title: title.value,
-    description: description.value
+    description: description.value,
+    type: 'oneof'
   }
 
   isLoading.value = true

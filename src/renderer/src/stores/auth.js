@@ -31,7 +31,17 @@ export const useUserStore = defineStore('user', {
       const { data } = await axios.get('http://localhost:3000/users')
       this.users = data
     },
-
+    async answerQuestion(id, answer) {
+      console.log(this.user)
+      let data = {
+        id,
+        answer
+      }
+      await axios.patch(`http://localhost:3000/users/${this.user[0].id}`, {
+        questions: [...this.user[0].questions, data]
+      })
+      this.user[0].questions = [...this.user[0].questions, data]
+    },
     logout() {
       this.user = null
     }

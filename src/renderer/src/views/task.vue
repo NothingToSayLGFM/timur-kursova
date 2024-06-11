@@ -1,5 +1,9 @@
 <template>
-  <p>some</p>
+  <v-container>
+    <UpdateTmp />
+  </v-container>
 </template>
 
-<script setup></script>
+<script setup>
+import UpdateTmp from '../components/UpdateTmp.vue'
+</script>

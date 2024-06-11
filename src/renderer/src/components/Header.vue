@@ -27,8 +27,8 @@ const user = computed(() => {
 })
 
 function logout() {
-  store.logout()
   router.push({ name: 'login' })
+  store.logout()
 }
 </script>
 

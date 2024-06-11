@@ -5,40 +5,37 @@
       "role": "admin",
       "login": "admin",
       "password": "admin"
+    },
+    {
+      "id": "60c9",
+      "login": "student",
+      "password": "student",
+      "questions": []
     }
   ],
   "tasks": [
     {
-      "id": "241b",
-      "title": "testtype",
-      "description": "testtype",
-      "answer": "testtype",
+      "id": "ca9f",
+      "title": "type",
+      "description": "type",
+      "rightUnswer": "type",
       "type": "typing"
     },
     {
-      "id": "b703",
-      "rightUnswer": [
-        "testMulti"
-      ],
-      "questions": [
-        "testMulti",
-        "testType",
-        "testVar"
-      ],
-      "title": "testMulti",
-      "description": "testMulti",
+      "id": "a517",
+      "rightUnswer": ["multi1", "multi3"],
+      "questions": ["multi1", "multi2", "multi3"],
+      "title": "multi",
+      "description": "multi",
       "type": "checkboxes"
     },
     {
-      "id": "e43b",
-      "questions": [
-        "testVar",
-        "testMulti",
-        "testType"
-      ],
-      "rightUnswer": "testVar",
-      "title": "testVar",
-      "description": "testVar"
+      "id": "fa15",
+      "questions": ["oneof1", "oneof2", "oneof3"],
+      "rightUnswer": "oneof3",
+      "title": "oneof",
+      "description": "oneof",
+      "type": "oneof"
     }
   ]
 }

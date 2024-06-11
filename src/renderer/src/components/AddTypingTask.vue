@@ -5,7 +5,7 @@
     <v-text-field
       label="answer"
       append-icon="mdi-check-decagram"
-      v-model="formData.answer"
+      v-model="formData.rightUnswer"
       variant="outlined"
     ></v-text-field>
     <v-btn block color="success" :loading="isLoading" :disabled="isLoading" type="submit"
@@ -26,13 +26,13 @@ const isLoading = ref(false)
 const formData = reactive({
   title: '',
   description: '',
-  answer: '',
+  rightUnswer: '',
   type: 'typing'
 })
 
 async function submit() {
   console.log(formData)
-  if (!formData.title || !formData.description || !formData.answer) return
+  if (!formData.title || !formData.description || !formData.rightUnswer) return
   isLoading.value = true
   await store.createTask(formData)
   isLoading.value = false
