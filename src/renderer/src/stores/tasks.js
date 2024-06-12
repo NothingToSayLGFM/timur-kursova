@@ -24,6 +24,7 @@ export const useTasksStore = defineStore('tasks', {
     async getTask(id) {
       const { data } = await axios.get(`http://localhost:3000/tasks/${id}`)
       this.activeTask = data
+      console.log(this.activeTask)
     }
   },
   persist: true

@@ -11,6 +11,28 @@
       "login": "student",
       "password": "student",
       "questions": []
+    },
+    {
+      "id": "0589",
+      "login": "tim",
+      "password": "tim",
+      "questions": [
+        {
+          "id": "ca9f",
+          "answer": "jkjjk"
+        },
+        {
+          "id": "a517",
+          "answer": [
+            "multi2",
+            "multi3"
+          ]
+        },
+        {
+          "id": "fa15",
+          "answer": "oneof2"
+        }
+      ]
     }
   ],
   "tasks": [
@@ -23,15 +45,26 @@
     },
     {
       "id": "a517",
-      "rightUnswer": ["multi1", "multi3"],
-      "questions": ["multi1", "multi2", "multi3"],
+      "rightUnswer": [
+        "multi1",
+        "multi3"
+      ],
+      "questions": [
+        "multi1",
+        "multi2",
+        "multi3"
+      ],
       "title": "multi",
       "description": "multi",
       "type": "checkboxes"
     },
     {
       "id": "fa15",
-      "questions": ["oneof1", "oneof2", "oneof3"],
+      "questions": [
+        "oneof1",
+        "oneof2",
+        "oneof3"
+      ],
       "rightUnswer": "oneof3",
       "title": "oneof",
       "description": "oneof",
